@@ -8,13 +8,13 @@ command: pokemmo.sh
 tags:
   - proprietary
 finish-args:
-- --socket=x11
-- --share=ipc
-- --socket=wayland
-- --socket=pulseaudio
-- --device=all
-- --share=network
-- --env=PATH=/app/jre/bin:/app/bin:/usr/bin
+  - --socket=x11
+  - --share=ipc
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --device=all
+  - --share=network
+  - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
 
 modules:
   - shared-modules/libdecor/libdecor-0.2.0.json
@@ -34,9 +34,9 @@ modules:
       - /lib/pkgconfig
       - /share/doc
 
-  - name : openjdk
-    buildsystem : simple
-    build-commands :
+  - name: openjdk
+    buildsystem: simple
+    build-commands:
       - /usr/lib/sdk/openjdk/install.sh
 
   - name: pokemmo
@@ -54,8 +54,8 @@ modules:
       - type: extra-data
         filename: PokeMMO-Client.zip
         url: https://dl.pokemmo.com/download/PokeMMO-Client.zip
-        sha256: d8a713105b6263ec26257e22f84c213db8ded32d479ab30a685a838ec8371a47
-        size: 77373135
+        sha256: 1ff60891a3f75b761b399edaf4bf0258c1443dd02b4a113a6554cd3403fb141a
+        size: 77623870
         x-checker-data:
           type: rotating-url
           url: https://dl.pokemmo.com/download/PokeMMO-Client.zip
