@@ -1,6 +1,6 @@
 app-id: com.pokemmo.PokeMMO
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk
@@ -21,9 +21,11 @@ modules:
   - name: glfw
     buildsystem: cmake-ninja
     config-opts:
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-      - -DBUILD_SHARED_LIBS:BOOL=ON
+      - -DBUILD_SHARED_LIBS=ON
       - -DGLFW_USE_WAYLAND=ON
+      - -DGLFW_BUILD_EXAMPLES=OFF
+      - -DGLFW_BUILD_TESTS=OFF
+      - -DGLFW_BUILD_DOCS=OFF
     sources:
       - type: git
         url: https://github.com/glfw/glfw.git
@@ -32,8 +34,7 @@ modules:
       - /include
       - /lib/cmake
       - /lib/pkgconfig
-      - /share/doc
-
+      
   - name: openjdk
     buildsystem: simple
     build-commands:
