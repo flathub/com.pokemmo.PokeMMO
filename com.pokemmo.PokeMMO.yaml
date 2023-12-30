@@ -18,6 +18,16 @@ finish-args:
 
 modules:
   - shared-modules/libdecor/libdecor-0.2.0.json
+  
+  - name: extra-cmake-modules
+    buildsystem: cmake-ninja
+    cleanup:
+      - '*'
+    sources:
+      - type: git
+        url: https://github.com/KDE/extra-cmake-modules.git
+        tag: v5.247.0
+      
   - name: glfw
     buildsystem: cmake-ninja
     config-opts:
