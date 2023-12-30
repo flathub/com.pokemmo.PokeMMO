@@ -1,6 +1,6 @@
 app-id: com.pokemmo.PokeMMO
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk
@@ -27,7 +27,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/glfw/glfw.git
-        commit: 3eaf1255b29fdf5c2895856c7be7d7185ef2b241
+        tag: 3.3.9
     cleanup:
       - /include
       - /lib/cmake
