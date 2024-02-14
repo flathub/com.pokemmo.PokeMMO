@@ -54,8 +54,8 @@ modules:
       - type: extra-data
         filename: PokeMMO-Client.zip
         url: https://dl.pokemmo.com/download/PokeMMO-Client.zip
-        sha256: f2801502061124df1c0f6868ab00a0a6f82165a8d5af33414aaaabb590a927df
-        size: 77634953
+        sha256: 8530bb3fac017d600f822a71be1d81f6bb0b97346b38d1761ca594b12610a5dc
+        size: 77874457
         x-checker-data:
           type: rotating-url
           url: https://dl.pokemmo.com/download/PokeMMO-Client.zip
