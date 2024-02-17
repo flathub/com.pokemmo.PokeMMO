@@ -40,11 +40,6 @@
     <control>keyboard</control>
     <control>gamepad</control>
   </supports>
-  <recommends>
-    <control>keyboard</control>
-    <control>pointing</control>
-    <control>touch</control>
-  </recommends>
   <requires>
     <display_length>360</display_length>
   </requires>
@@ -55,13 +50,13 @@
       PokeMMO is an online-only emulator for several popular Nintendo DS &amp; Game Boy Advance games, allowing you to play, talk, fight, and trade with other players in real time. PokeMMO also supports Windows, macOS, Linux, Android, and iOS, with tens of thousands of players online daily in a cross-play environment
     </p>
     <p>
-      PokeMMO requires certain third-party ROM files to play. Visit https://pokemmo.com/downloads/linux/ for the current list of ROM files compatible with the game
+      PokeMMO requires certain third-party ROM files to play. Visit <url>https://pokemmo.com/downloads/linux/<url/> for the current list of ROM files compatible with the game
     </p>
     <p>
-      This game requires a constant internet connection. Usage of this program requires an account with https://pokemmo.com/ and requires you to accept the PokeMMO Terms of Service at login. Visit https://pokemmo.com/tos and https://pokemmo.com/privacy for service terms
+      This game requires a constant internet connection. Usage of this program requires an account with <url>https://pokemmo.com/<url/> and requires you to accept the PokeMMO Terms of Service at login. Visit <url>https://pokemmo.com/tos<url/> and <url>https://pokemmo.com/privacy<url/> for service terms
     </p>
     <p>
-      For technical support, please visit https://support.pokemmo.com/ after creating a game account
+      For technical support, please visit <url>https://support.pokemmo.com/<url/> after creating a game account
     </p>
     <p>This wrapper is not verified by, affiliated with, or supported by the PokeMMO Team.</p>
   </description>
