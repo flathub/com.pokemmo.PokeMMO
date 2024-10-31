@@ -22,11 +22,12 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DBUILD_SHARED_LIBS:BOOL=ON
-      - -DGLFW_USE_WAYLAND=ON
+      - -DGLFW_BUILD_WAYLAND=ON
+      - -DGLFW_BUILD_X11=ON
     sources:
       - type: git
         url: https://github.com/glfw/glfw.git
-        commit: 3eaf1255b29fdf5c2895856c7be7d7185ef2b241
+        commit: 7b6aead9fb88b3623e3b3725ebb42670cbe4c579
     cleanup:
       - /include
       - /lib/cmake
