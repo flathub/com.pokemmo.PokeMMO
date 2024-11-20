@@ -7,5 +7,5 @@ Icon=com.pokemmo.PokeMMO
 Exec=pokemmo.sh
 Terminal=false
 StartupNotify=false
-Keywords=pokemmo;pokemon
-Categories=Game
+Keywords=game;adventure;multiplayer;online;emulator;monster;battle;pokemmo
+Categories=Game;AdventureGame;Emulator;RolePlaying;
