@@ -9,7 +9,7 @@ finish-args:
   - --socket=x11
   - --socket=wayland
   - --share=network
-  - --device=dri
+  - --device=all
   - --socket=pulseaudio
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
 modules:
