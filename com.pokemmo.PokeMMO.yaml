@@ -29,8 +29,8 @@ modules:
       - install -Dp -m 644 com.pokemmo.PokeMMO.desktop /app/share/applications/com.pokemmo.PokeMMO.desktop
       # Settings desktop entry
       - install -Dm644 icon_settings_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.Settings.png
-      - install -Dm644 con_settings_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.Settings.png
-      - install -Dm644 con_settings_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dm644 icon_settings_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dm644 icon_settings_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.Settings.png
       - install -Dp -m 644 com.pokemmo.PokeMMO.desktop /app/share/applications/com.pokemmo.PokeMMO.Settings.desktop
       # Metainfo
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
