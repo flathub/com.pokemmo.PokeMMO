@@ -1,8 +1,9 @@
 app-id: com.pokemmo.PokeMMO
-runtime: org.freedesktop.Platform
-runtime-version: '24.08'
-sdk: org.freedesktop.Sdk
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
 sdk-extensions: [org.freedesktop.Sdk.Extension.openjdk21]
+separate-locales: false
 command: pokemmo.sh
 finish-args:
   - --share=ipc
@@ -12,6 +13,12 @@ finish-args:
   - --socket=pulseaudio
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
 modules:
+  - name: zenity
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://download.gnome.org/sources/zenity/4.0/zenity-4.0.3.tar.xz
+        sha256: b429d97b87bd9ce7fb72ac0b78df534725d8ad39817ddca6a4ca2ee5381b08de
   - name: OpenJDK
     buildsystem: simple
     build-commands:
