@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=PokeMMO
+GenericName=PokeMMO
+Type=Application
+Comment=Multiplayer Animal Hoarding Simulator
+Icon=com.pokemmo.PokeMMO
+Exec=pokemmo.sh
+Terminal=false
+StartupNotify=false
+Keywords=game;adventure;multiplayer;online;emulator;monster;battle;pokemmo
+Categories=Game;AdventureGame;Emulator;RolePlaying;

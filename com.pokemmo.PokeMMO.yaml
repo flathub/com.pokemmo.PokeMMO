@@ -1,73 +1,53 @@
 app-id: com.pokemmo.PokeMMO
-runtime: org.freedesktop.Platform
-runtime-version: '23.08'
-sdk: org.freedesktop.Sdk
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
+sdk-extensions: [org.freedesktop.Sdk.Extension.openjdk21]
+separate-locales: false
 command: pokemmo.sh
-tags:
-  - proprietary
 finish-args:
-  - --socket=x11
   - --share=ipc
-  - --socket=pulseaudio
-  - --device=all
+  - --socket=x11
   - --share=network
+  - --device=all
+  - --socket=pulseaudio
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
-
 modules:
-  - shared-modules/libdecor/libdecor-0.2.0.json
-  - name: glfw
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-      - -DBUILD_SHARED_LIBS:BOOL=ON
-      - -DGLFW_USE_WAYLAND=ON
+  - name: zenity
+    buildsystem: meson
     sources:
-      - type: git
-        url: https://github.com/glfw/glfw.git
-        commit: 3eaf1255b29fdf5c2895856c7be7d7185ef2b241
-    cleanup:
-      - /include
-      - /lib/cmake
-      - /lib/pkgconfig
-      - /share/doc
-
-  - name: openjdk
+      - type: archive
+        url: https://download.gnome.org/sources/zenity/4.0/zenity-4.0.3.tar.xz
+        sha256: b429d97b87bd9ce7fb72ac0b78df534725d8ad39817ddca6a4ca2ee5381b08de
+  - name: OpenJDK
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk/install.sh
-
-  - name: pokemmo
+      - /usr/lib/sdk/openjdk21/install.sh
+  - name: PokeMMO
     buildsystem: simple
+    only-arches: [x86_64, aarch64]
     build-commands:
+      - install -D unix-installer.jar /app/bin/unix-installer.jar
       - install -D pokemmo.sh /app/bin/pokemmo.sh
-      - install -Dm 755 apply_extra /app/bin/apply_extra
-      # Icon
-      - install -Dm644 128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.png
-      # Desktop entry
+      # Main desktop entry
+      - install -Dm644 icon_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.png
       - install -Dp -m 644 com.pokemmo.PokeMMO.desktop /app/share/applications/com.pokemmo.PokeMMO.desktop
-      # Placing appdata
+      # Settings desktop entry
+      - install -Dm644 icon_settings_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dm644 icon_settings_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dm644 icon_settings_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dp -m 644 com.pokemmo.PokeMMO.Settings.desktop /app/share/applications/com.pokemmo.PokeMMO.Settings.desktop
+      # Metainfo
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
-      - type: extra-data
-        filename: PokeMMO-Client.zip
-        url: https://dl.pokemmo.com/download/PokeMMO-Client.zip
-        sha256: 1530bbc9692ae55c61d2aa0ea894a24d2d313c6a354e3e012079a1047250172b
-        size: 81207063
-        x-checker-data:
-          type: rotating-url
-          url: https://dl.pokemmo.com/download/PokeMMO-Client.zip
-      - type: script
-        dest-filename: apply_extra
-        commands:
-          - unzip /app/extra/PokeMMO-Client.zip -d .
-          - rm -f /app/extra/PokeMMO-Client.zip
-      - type: file
-        path: pokemmo.sh
-      - type: file
-        path: com.pokemmo.PokeMMO.desktop
+      - type: archive
+        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v2.0b-stable/v2.0b-stable.zip
+        sha256: 80917c54ce528573ddabb490350b7af2c36c8ec7fa6482b9fe1b407f9b4f1647
+      - type: dir
+        path: static
+      - type: dir
+        path: icons
       - type: file
         path: com.pokemmo.PokeMMO.metainfo.xml
-      - type: file
-        path: 128x128.png
