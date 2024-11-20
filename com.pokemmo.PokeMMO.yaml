@@ -13,7 +13,6 @@ finish-args:
   - --socket=pulseaudio
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
 modules:
-  - shared-modules/libdecor/libdecor-0.2.0.json
   - name: OpenJDK
     buildsystem: simple
     build-commands:
