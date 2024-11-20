@@ -21,17 +21,20 @@ modules:
     only-arches: [x86_64, aarch64]
     build-commands:
       - install -D unix-installer.jar /app/bin/unix-installer.jar
-      - install -D launch.sh /app/bin/launch.sh
-      - install -Dm644 icons/icon_16x16.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.png
-      - install -Dm644 icons/icon_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.png
-      - install -Dm644 icons/icon_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.png
-      - install -Dm644 icons/icon_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.png
+      - install -D pokemmo.sh /app/bin/pokemmo.sh
+      - install -Dm644 icon_16x16.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.png
       - install -Dp -m 644 com.pokemmo.PokeMMO.desktop /app/share/applications/com.pokemmo.PokeMMO.desktop
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
         url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v2.0b-stable/v2.0b-stable.zip
         sha256: 80917c54ce528573ddabb490350b7af2c36c8ec7fa6482b9fe1b407f9b4f1647
-      - type: git
-        url: https://github.com/kyu-n/pokemmo-flatpak.git
-        branch: master
+      - type: dir
+        path: static
+      - type: dir
+        path: icons
+      - type: file
+        path: com.pokemmo.PokeMMO.metainfo.xml
