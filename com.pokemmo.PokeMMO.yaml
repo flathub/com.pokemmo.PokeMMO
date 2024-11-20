@@ -7,7 +7,6 @@ command: pokemmo.sh
 finish-args:
   - --share=ipc
   - --socket=x11
-  - --socket=wayland
   - --share=network
   - --device=all
   - --socket=pulseaudio
