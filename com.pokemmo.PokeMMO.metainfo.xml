@@ -85,18 +85,14 @@
                     <li>Fixes caching issues seen in previous versions</li>
                     <li>Fixes startup failures seen in previous versions</li>
                 </ul>
-                <br/>
                 <p>Wayland Support</p>
                 <ul>
-                    <li>
-                        Wayland support is experimental and partially available. To enable, open Flatpak Permissions and enable both "X11 windowing system" and "Wayland windowing system" under Advanced Permissions for PokeMMO.
-                    </li>
+                    <li>Wayland support is experimental and partially available.</li>
+                    <li>To enable, open Flatpak Permissions and enable both "X11 windowing system" and "Wayland windowing system" under Advanced Permissions for PokeMMO. Then, select the Wayland compositor under Video Settings after starting PokeMMO.</li>
                 </ul>
                 <p>Steam Deck Support</p>
                 <ul>
-                    <li>
-                        Steam OS is partially supported. Visit https://support.pokemmo.com/knowledgebase/article/steam-deck-setup for setup information.
-                    </li>
+                    <li>Steam OS is partially supported. Visit https://support.pokemmo.com/knowledgebase/article/steam-deck-setup for setup information.</li>
                 </ul>
             </description>
         </release>
