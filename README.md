@@ -20,12 +20,24 @@ This game requires a constant internet connection. For technical support, please
 <img src="https://pokemmo.com/build/images/screenshot/c-t.d7d3e35d.jpg">
 <img src="https://pokemmo.com/build/images/screenshot/b-t.45f3af02.jpg">
 
+# Wayland support
+
+Wayland support is considered experimental and may not work correctly for your platform. While the game client supports Wayland, the Unix Launcher requires X11 at this time.
+
+Wayland is currently disabled by default, but you may want to enable it for HiDPI display scaling. To enable it:
+<ol>
+<li>In your Settings menu, open Flatpak Permissions and navigate to PokeMMO</li>
+<li>Under "Advanced Permissions", ensure Wayland windowing system and X11 windowing system boxes are checked. <b>Do not select "Fallback to X11 windowing system."</b></li>
+<li>Open PokeMMO. In the Settings menu, navigate to Video settings. Select "Wayland" under "Display Compositor"</li>
+<li>Restart PokeMMO</li>
+</ol>
+
+# Steam Deck support
+
+Support for Steam Deck / Steam OS is considered experimental and requires manual setup steps. Visit https://support.pokemmo.com/knowledgebase/article/steam-deck-setup for more information on how to set up the game client for Steam OS
+
 # Legal
 
 Usage of this program requires an account with https://pokemmo.com/ and requires you to accept the PokeMMO Terms of Service at login. Visit https://pokemmo.com/tos and https://pokemmo.com/privacy for service terms
 
 PokeMMO is not affiliated or associated with any other company. All logos, trademarks, and trade names used herein are the property of their respective owners.
-
-# Wayland support
-
-Wayland support is experimental for the game client and may not work correctly for your platform. While the game client works with Wayland, some components of the game (the updater and unix wrapper) currently require Xwayland. Advanced users can use Flatseal to remove the X11 permission.
