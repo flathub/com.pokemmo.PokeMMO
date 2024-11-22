@@ -3,7 +3,12 @@
     <id>com.pokemmo.PokeMMO</id>
 
     <name>PokeMMO</name>
-    <summary>PokeMMO Game Client</summary>
+    <summary>Multiplayer Nintendo DS and GBA game emulator</summary>
+
+    <branding>
+        <color type="primary" scheme_preference="light">#f2c884</color>
+        <color type="primary" scheme_preference="dark">#d88f71</color>
+    </branding>
 
     <developer id="com.pokemmo">
         <name>PokeMMO Developers</name>
@@ -59,13 +64,13 @@
 
     <screenshots>
         <screenshot type="default">
-            <image>https://pokemmo.com/build/images/screenshot/b.3a233486.png</image>
+            <image>https://pokemmo.com/build/images/screenshot/a.debf11f5.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://pokemmo.com/build/images/screenshot/c.b5d935d8.png</image>
         </screenshot>
         <screenshot>
             <image>https://pokemmo.com/build/images/screenshot/d.4080dd9c.png</image>
-        </screenshot>
-        <screenshot>
-            <image>https://pokemmo.com/build/images/screenshot/e.ed0aa85b.png</image>
         </screenshot>
     </screenshots>
 
@@ -86,6 +91,7 @@
     <categories>
         <category>Game</category>
         <category>Emulator</category>
+        <category>RolePlaying</category>
     </categories>
 
     <keywords>
