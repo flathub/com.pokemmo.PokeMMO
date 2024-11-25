@@ -75,6 +75,7 @@
     </screenshots>
 
     <releases>
+        <release version="2.0c" date="2024-11-25"/>
         <release version="2.0b" date="2024-11-18">
             <description>
                 <p>This is the first official release of the PokeMMO flatpak. Previous unofficial versions have been superseded by this package.</p>
