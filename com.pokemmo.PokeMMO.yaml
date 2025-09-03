@@ -1,6 +1,6 @@
 app-id: com.pokemmo.PokeMMO
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 sdk-extensions: [org.freedesktop.Sdk.Extension.openjdk21]
 separate-locales: false
@@ -17,8 +17,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/zenity/4.0/zenity-4.0.3.tar.xz
-        sha256: b429d97b87bd9ce7fb72ac0b78df534725d8ad39817ddca6a4ca2ee5381b08de
+        url: https://download.gnome.org/sources/zenity/4.0/zenity-4.0.5.tar.xz
+        sha256: 8a3ffe7751bed497a758229ece07be9114ad4e46a066abae4e5f31d6da4c0e9e
   - name: OpenJDK
     buildsystem: simple
     build-commands:
@@ -43,8 +43,8 @@ modules:
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v2.0c-stable/v2.0c-stable.zip
-        sha256: 39a281ac5b6708aabc2c833b3605e9f6d49ab83b9cc55aae0df48abcdcd17207
+        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0a-stable/v3.0a-stable.zip
+        sha256: 5c6a3fc358f6b34e0be2fd85ce318c900a6704ef53ba4aa806aa78e6f9efc02c
       - type: dir
         path: static
       - type: dir

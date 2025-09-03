@@ -75,6 +75,15 @@
     </screenshots>
 
     <releases>
+        <release version="3.0a" date="2025-09-03">
+            <description>
+                <p>Updates the PokeMMO Unix Launcher to v3.0a</p>
+                <ul>
+                    <li>The launcher has been rewritten for Flatpak Wayland compatibility. The game client will automatically enable Wayland when available</li>
+                    <li>Improves feed sharing between Launcher / Client, reducing startup times</li>
+                </ul>
+            </description>
+        </release>
         <release version="2.0c" date="2024-11-25"/>
         <release version="2.0b" date="2024-11-18">
             <description>
