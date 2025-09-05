@@ -7,7 +7,6 @@
 Welcome to a new era of online monster battles.
 Stop playing by yourself and start playing with everyone else.
 
-
 # Summary
 
 This is the official Flatpak for PokeMMO, a turn-based MMORPG. PokeMMO is an online-only emulator for several popular Nintendo DS & Game Boy Advance games, allowing you to play, talk, fight, and trade with other players in real time. PokeMMO supports Windows, macOS, Linux, Android, and iOS, with tens of thousands of players online daily in a cross-play environment
@@ -20,17 +19,14 @@ This game requires a constant internet connection. For technical support, please
 <img src="https://pokemmo.com/build/images/screenshot/c-t.d7d3e35d.jpg">
 <img src="https://pokemmo.com/build/images/screenshot/b-t.45f3af02.jpg">
 
-# Wayland support
+# Wayland / X11 Support
 
-Wayland support is considered experimental and may not work correctly for your platform. While the game client supports Wayland, the Unix Launcher requires X11 at this time.
+Wayland and X11 are supported for Flatpak as-of Unix Launcher v3.0b.
 
-Wayland is currently disabled by default, but you may want to enable it for HiDPI display scaling. To enable it:
-<ol>
-<li>In your Settings menu, open Flatpak Permissions and navigate to PokeMMO</li>
-<li>Under "Advanced Permissions", ensure Wayland windowing system and X11 windowing system boxes are checked. <b>Do not select "Fallback to X11 windowing system."</b></li>
-<li>Open PokeMMO. In the Settings menu, navigate to Video settings. Select "Wayland" under "Display Compositor"</li>
-<li>Restart PokeMMO</li>
-</ol>
+Due to limitations with flatpak's support of display servers, you can not forcibly mix display server settings:
+✅ Wayland on Wayland-enabled desktop environment
+✅ X11 on X11-only desktop environment
+❌ X11 on Wayland-enabled desktop environment— Only achievable if you modify permissions. This will fail to start with a "No available display compositors" error
 
 # Steam Deck support
 
