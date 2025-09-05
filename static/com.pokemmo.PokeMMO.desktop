@@ -10,3 +10,4 @@ StartupNotify=false
 Keywords=game;adventure;multiplayer;online;emulator;monster;battle;pokemmo
 Categories=Game;AdventureGame;Emulator;RolePlaying;
 StartupWMClass=com.pokemmo.PokeMMO
+StartupNotify=true
