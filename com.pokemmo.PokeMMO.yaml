@@ -7,7 +7,8 @@ separate-locales: false
 command: pokemmo.sh
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --share=network
   - --device=all
   - --socket=pulseaudio
@@ -43,8 +44,8 @@ modules:
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0a-flatpak/v3.0a-flatpak-hackbranch.zip
-        sha256: 5cf256747ea68ef14f0483458519dab209833ef1f08e2f2ed2f63bffff4b928d
+        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0b-flatpak/v3.0b-flatpak.zip
+        sha256: 4eb56e0a1e01e43501d7eced8be7c0921a8d35c56bf670970443c1b90fe1956f
       - type: dir
         path: static
       - type: dir
