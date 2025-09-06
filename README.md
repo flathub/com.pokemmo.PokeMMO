@@ -32,7 +32,11 @@ If you need Xwayland, we recommend using the Portable Installation from https://
 
 # Steam Deck support
 
-Support for Steam Deck / Steam OS is considered experimental and requires manual setup steps. Visit https://support.pokemmo.com/knowledgebase/article/steam-deck-setup for more information on how to set up the game client for Steam OS
+Support for Steam Deck / Steam OS is considered experimental and requires manual setup steps. Visit [https://support.pokemmo.com/knowledgebase/article/steam-deck-setup](https://support.pokemmo.com/knowledgebase/article/steam-deck-setup) for more information on how to set up the game client for Steam OS
+
+# ChromeOS support
+
+Support for Chromebooks / ChromeOS (via [Crostini](https://chromeos.dev/en/linux)) is considered experimental and requires manual setup steps. Visit [https://support.pokemmo.com/knowledgebase/article/steam-deck-setup](https://support.pokemmo.com/knowledgebase/article/chromeos-setup) for more information on how to set up the game client for Steam OS
 
 # Legal
 
