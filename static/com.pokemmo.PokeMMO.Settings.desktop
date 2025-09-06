@@ -16,3 +16,4 @@ Terminal=false
 Type=Application
 Icon=com.pokemmo.PokeMMO.Settings
 Categories=Game;AdventureGame;Emulator;RolePlaying;
+StartupWMClass=com.pokemmo.PokeMMO.Settings

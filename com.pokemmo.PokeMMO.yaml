@@ -7,7 +7,8 @@ separate-locales: false
 command: pokemmo.sh
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --share=network
   - --device=all
   - --socket=pulseaudio
@@ -18,7 +19,7 @@ modules:
     sources:
       - type: archive
         url: https://download.gnome.org/sources/zenity/4.0/zenity-4.0.5.tar.xz
-        sha256: 8a3ffe7751bed497a758229ece07be9114ad4e46a066abae4e5f31d6da4c0e9e
+        sha512: 534cc68a766de916bb6057a9bda6fd8df0d891c9b9675e381045ab884052cfd18cd509638260031eaf308e401c6f1bb64aa7df491d32abb6e1a22c5e27419540
   - name: OpenJDK
     buildsystem: simple
     build-commands:
@@ -30,21 +31,29 @@ modules:
       - install -D unix-installer.jar /app/bin/unix-installer.jar
       - install -D pokemmo.sh /app/bin/pokemmo.sh
       # Main desktop entry
+      - install -Dm644 icon_24x24.png /app/share/icons/hicolor/24x24/apps/com.pokemmo.PokeMMO.png
       - install -Dm644 icon_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_48x48.png /app/share/icons/hicolor/48x48/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_64x64.png /app/share/icons/hicolor/64x64/apps/com.pokemmo.PokeMMO.png
       - install -Dm644 icon_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.png
       - install -Dm644 icon_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_512x512.png /app/share/icons/hicolor/512x512/apps/com.pokemmo.PokeMMO.png
       - install -Dp -m 644 com.pokemmo.PokeMMO.desktop /app/share/applications/com.pokemmo.PokeMMO.desktop
       # Settings desktop entry
+      - install -Dm644 icon_settings_24x24.png /app/share/icons/hicolor/24x24/apps/com.pokemmo.PokeMMO.Settings.png
       - install -Dm644 icon_settings_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dm644 icon_settings_48x48.png /app/share/icons/hicolor/48x48/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dm644 icon_settings_64x64.png /app/share/icons/hicolor/64x64/apps/com.pokemmo.PokeMMO.Settings.png
       - install -Dm644 icon_settings_128x128.png /app/share/icons/hicolor/128x128/apps/com.pokemmo.PokeMMO.Settings.png
       - install -Dm644 icon_settings_256x256.png /app/share/icons/hicolor/256x256/apps/com.pokemmo.PokeMMO.Settings.png
+      - install -Dm644 icon_settings_512x512.png /app/share/icons/hicolor/512x512/apps/com.pokemmo.PokeMMO.Settings.png
       - install -Dp -m 644 com.pokemmo.PokeMMO.Settings.desktop /app/share/applications/com.pokemmo.PokeMMO.Settings.desktop
       # Metainfo
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0a-stable/v3.0a-stable.zip
-        sha256: 5c6a3fc358f6b34e0be2fd85ce318c900a6704ef53ba4aa806aa78e6f9efc02c
+        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0d-stable/v3.0d-stable.zip
+        sha512: 148c73f460d660371be31eac23bcbcf1bc8c65084cf1ceeca5ff67a2681a06ad1b33710eba2017b23237439ff9ffc7c13959c15dcf258a9fbb4e1206f035850a
       - type: dir
         path: static
       - type: dir
