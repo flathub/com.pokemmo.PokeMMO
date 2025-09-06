@@ -75,11 +75,16 @@
     </screenshots>
 
     <releases>
-        <release version="3.0c" date="2025-09-05">
+        <release version="3.0d" date="2025-09-06">
             <description>
-                <p>Updates the PokeMMO Unix Launcher to v3.0c</p>
+                <p>Updates the PokeMMO Unix Launcher to v3.0d</p>
                 <ul>
                     <li>On platforms which support Wayland, Wayland is now enabled</li>
+                </ul>
+                <p>Bug Fixes</p>
+                <ul>
+                    <li>Better backend support for Wayland, automated transitions between X11 &amp; Wayland where available</li>
+                    <li>Improved icons for HiDPI displays for Flatpak distribution</li>
                 </ul>
             </description>
         </release>
