@@ -23,10 +23,12 @@ This game requires a constant internet connection. For technical support, please
 
 Wayland and X11 are supported for Flatpak as-of Unix Launcher v3.0b.
 
-Due to limitations with flatpak's support of display servers, you can not forcibly mix display server settings:
-✅ Wayland on Wayland-enabled desktop environment
-✅ X11 on X11-only desktop environment
-❌ X11 on Wayland-enabled desktop environment— Only achievable if you modify permissions. This will fail to start with a "No available display compositors" error
+Due to limitations with flatpak's support of display servers, you can not mix display server settings:
+- ✅ Wayland on Wayland-enabled desktop environment
+- ✅ X11 on X11-only desktop environment
+- ❌ X11 on Wayland-enabled desktop environment— Only achievable if you modify permissions. This will fail to start with a "No available display compositors" error
+
+If you need Xwayland, we recommend using the Portable Installation from https://pokemmo.com/
 
 # Steam Deck support
 
