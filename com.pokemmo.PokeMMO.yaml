@@ -52,8 +52,8 @@ modules:
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0d-stable/v3.0d-stable.zip
-        sha512: 148c73f460d660371be31eac23bcbcf1bc8c65084cf1ceeca5ff67a2681a06ad1b33710eba2017b23237439ff9ffc7c13959c15dcf258a9fbb4e1206f035850a
+        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0e-stable/v3.0e-stable.zip
+        sha512: ebfa1e5d041be9e92631a40085556b76a0aacbe4039d569ceeb8bb6406ea7781f01beba02c9f40c02e0e195191626d02faace8224c4d7662d645caf5e01645cd
       - type: dir
         path: static
       - type: dir
