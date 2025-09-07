@@ -23,14 +23,20 @@ This game requires a constant internet connection. For technical support, please
 
 Wayland and X11 are supported for Flatpak as-of Unix Launcher v3.0b.
 
-Due to limitations with flatpak's support of display servers, you can not forcibly mix display server settings:
-✅ Wayland on Wayland-enabled desktop environment
-✅ X11 on X11-only desktop environment
-❌ X11 on Wayland-enabled desktop environment— Only achievable if you modify permissions. This will fail to start with a "No available display compositors" error
+Due to limitations with flatpak's support of display servers, you can not mix display server settings:
+- ✅ Wayland on Wayland-enabled desktop environment
+- ✅ X11 on X11-only desktop environment
+- ❌ X11 on Wayland-enabled desktop environment— Only achievable if you modify permissions. This will fail to start with a "No available display compositors" error
+
+If you need Xwayland, we recommend using the Portable Installation from https://pokemmo.com/
 
 # Steam Deck support
 
-Support for Steam Deck / Steam OS is considered experimental and requires manual setup steps. Visit https://support.pokemmo.com/knowledgebase/article/steam-deck-setup for more information on how to set up the game client for Steam OS
+Support for Steam Deck / Steam OS is considered experimental and requires manual setup steps. Visit [https://support.pokemmo.com/knowledgebase/article/steam-deck-setup](https://support.pokemmo.com/knowledgebase/article/steam-deck-setup) for more information on how to set up the game client for Steam OS
+
+# ChromeOS support
+
+Support for Chromebooks / ChromeOS (via [Crostini](https://chromeos.dev/en/linux)) is considered experimental and requires manual setup steps. Visit [https://support.pokemmo.com/knowledgebase/article/steam-deck-setup](https://support.pokemmo.com/knowledgebase/article/chromeos-setup) for more information on how to set up the game client for Steam OS
 
 # Legal
 
