@@ -13,6 +13,7 @@ finish-args:
   - --device=all
   - --socket=pulseaudio
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
+  - --env=__GL_THREADED_OPTIMIZATIONS=0
 modules:
   - name: zenity
     buildsystem: meson
