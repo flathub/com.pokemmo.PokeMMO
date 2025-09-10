@@ -13,6 +13,7 @@ finish-args:
   - --device=all
   - --socket=pulseaudio
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
+  - --env=__GL_THREADED_OPTIMIZATIONS=0
 modules:
   - name: zenity
     buildsystem: meson
@@ -52,8 +53,8 @@ modules:
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0d-stable/v3.0d-stable.zip
-        sha512: 148c73f460d660371be31eac23bcbcf1bc8c65084cf1ceeca5ff67a2681a06ad1b33710eba2017b23237439ff9ffc7c13959c15dcf258a9fbb4e1206f035850a
+        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0f-stable/v3.0f-stable.zip
+        sha512: fcde15776cd27dcaa2eb1c04987ef76791cb43f9713d940f2ca5468fadcd04fed88d6de2a1eb78bc670358bf834373874126b369d5069b5e8410cb7e91b7980f
       - type: dir
         path: static
       - type: dir

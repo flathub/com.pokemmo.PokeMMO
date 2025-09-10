@@ -36,7 +36,7 @@ Support for Steam Deck / Steam OS is considered experimental and requires manual
 
 # ChromeOS support
 
-Support for Chromebooks / ChromeOS (via [Crostini](https://chromeos.dev/en/linux)) is considered experimental and requires manual setup steps. Visit [https://support.pokemmo.com/knowledgebase/article/steam-deck-setup](https://support.pokemmo.com/knowledgebase/article/chromeos-setup) for more information on how to set up the game client for Steam OS
+Support for Chromebooks / ChromeOS (via [Crostini](https://chromeos.dev/en/linux)) is considered experimental and requires manual setup steps. Visit [https://support.pokemmo.com/knowledgebase/article/chromeos-setup](https://support.pokemmo.com/knowledgebase/article/chromeos-setup) for more information on how to set up the game client for Chromebooks / ChromeOS
 
 # Legal
 
