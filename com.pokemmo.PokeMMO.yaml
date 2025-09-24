@@ -32,7 +32,9 @@ modules:
       - install -D unix-installer.jar /app/bin/unix-installer.jar
       - install -D pokemmo.sh /app/bin/pokemmo.sh
       # Main desktop entry
+      - install -Dm644 icon_16x16.png /app/share/icons/hicolor/16x16/apps/com.pokemmo.PokeMMO.png
       - install -Dm644 icon_24x24.png /app/share/icons/hicolor/24x24/apps/com.pokemmo.PokeMMO.png
+      - install -Dm644 icon_22x22.png /app/share/icons/hicolor/22x22/apps/com.pokemmo.PokeMMO.png
       - install -Dm644 icon_32x32.png /app/share/icons/hicolor/32x32/apps/com.pokemmo.PokeMMO.png
       - install -Dm644 icon_48x48.png /app/share/icons/hicolor/48x48/apps/com.pokemmo.PokeMMO.png
       - install -Dm644 icon_64x64.png /app/share/icons/hicolor/64x64/apps/com.pokemmo.PokeMMO.png
