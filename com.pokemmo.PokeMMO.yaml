@@ -43,7 +43,7 @@ modules:
       - install -Dp -m 644 com.pokemmo.PokeMMO.Settings.desktop /app/share/applications/com.pokemmo.PokeMMO.Settings.desktop
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
       - |
-        if [ "$(uname -m)" = "aarch64" ]; then
+        if [ "$FLATPAK_ARCH" = "aarch64" ]; then
           install -Dm755 libglfw.so /app/lib/libglfw.so
           install -Dm755 libimgui-java64.so /app/lib/libimgui-java64.so
           install -Dm755 liblwjgl.so /app/lib/liblwjgl.so
