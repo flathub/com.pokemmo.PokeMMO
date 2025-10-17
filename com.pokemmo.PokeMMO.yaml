@@ -19,8 +19,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/zenity/4.0/zenity-4.0.5.tar.xz
-        sha512: 534cc68a766de916bb6057a9bda6fd8df0d891c9b9675e381045ab884052cfd18cd509638260031eaf308e401c6f1bb64aa7df491d32abb6e1a22c5e27419540
+        url: https://download.gnome.org/sources/zenity/4.2/zenity-4.2.0.tar.xz
+        sha512: 7458a1a7ba13ed13371117daca721d8df325f6a6c75410b1d7298448477104a066be839a4e1a96ef0579b5abfb304e98937672ac02adb8f9323e31bb55bf99bc
   - name: OpenJDK
     buildsystem: simple
     build-commands:
