@@ -6,7 +6,7 @@ sdk-extensions: [org.freedesktop.Sdk.Extension.openjdk21]
 separate-locales: false
 command: pokemmo.sh
 tags: 
-	- proprietary
+  - proprietary
 finish-args:
   - --share=ipc
   - --socket=wayland
