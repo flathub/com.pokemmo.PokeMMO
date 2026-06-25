@@ -29,7 +29,12 @@ modules:
     buildsystem: simple
     only-arches: [x86_64, aarch64]
     build-commands:
-      - install -D unix-installer.jar /app/bin/unix-installer.jar
+      - |
+        if [ "$FLATPAK_ARCH" = "aarch64" ]; then
+          install -Dm755 linux/arm64/PokeMMO-Updater /app/bin/launcher
+        else
+          install -Dm755 linux/x64/PokeMMO-Updater /app/bin/launcher
+        fi
       - install -D pokemmo.sh /app/bin/pokemmo.sh
       - |
         for size in 16x16 22x22 24x24 32x32 48x48 64x64 128x128 256x256 512x512; do
@@ -42,22 +47,14 @@ modules:
       - install -Dp -m 644 com.pokemmo.PokeMMO.desktop /app/share/applications/com.pokemmo.PokeMMO.desktop
       - install -Dp -m 644 com.pokemmo.PokeMMO.Settings.desktop /app/share/applications/com.pokemmo.PokeMMO.Settings.desktop
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
-      - |
-        if [ "$FLATPAK_ARCH" = "aarch64" ]; then
-          install -Dm755 libglfw.so /app/lib/libglfw.so
-          install -Dm755 libimgui-java64.so /app/lib/libimgui-java64.so
-          install -Dm755 liblwjgl.so /app/lib/liblwjgl.so
-          install -Dm755 liblwjgl_opengl.so /app/lib/liblwjgl_opengl.so
-        fi
     sources:
       - type: archive
-        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v3.0f-stable/v3.0f-stable.zip
-        sha512: fcde15776cd27dcaa2eb1c04987ef76791cb43f9713d940f2ca5468fadcd04fed88d6de2a1eb78bc670358bf834373874126b369d5069b5e8410cb7e91b7980f
+        url: https://github.com/kyu-n/pokemmo-unix-installer/releases/download/v4.0-beta1/native-image.zip
+        sha512: 9e4a7520f58c913b6d614828f01cee7629db83683fc5c5da8618ae165ca6cdb632a0cc75e41b1c577189facf60cca8d6cd4eace9ffcd11b5653e453f676f8994
+        strip-components: 0
       - type: dir
         path: static
       - type: dir
         path: icons
-      - type: dir
-        path: libs_aarch64
       - type: file
         path: com.pokemmo.PokeMMO.metainfo.xml
