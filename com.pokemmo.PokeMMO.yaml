@@ -52,9 +52,43 @@ modules:
         url: https://github.com/PokeMMO/pokemmo-launcher/releases/download/v4.0a/build.zip
         sha256: 4c9373aeae4610a7ef606a170c12d50862fa4dab6d72ef87b837710752e5525f
         strip-components: 0
-      - type: dir
-        path: static
-      - type: dir
-        path: icons
+      - type: file
+        path: static/pokemmo.sh
+      - type: file
+        path: static/com.pokemmo.PokeMMO.desktop
+      - type: file
+        path: static/com.pokemmo.PokeMMO.Settings.desktop
+      - type: file
+        path: icons/icon_16x16.png
+      - type: file
+        path: icons/icon_22x22.png
+      - type: file
+        path: icons/icon_24x24.png
+      - type: file
+        path: icons/icon_32x32.png
+      - type: file
+        path: icons/icon_48x48.png
+      - type: file
+        path: icons/icon_64x64.png
+      - type: file
+        path: icons/icon_128x128.png
+      - type: file
+        path: icons/icon_256x256.png
+      - type: file
+        path: icons/icon_512x512.png
+      - type: file
+        path: icons/icon_settings_24x24.png
+      - type: file
+        path: icons/icon_settings_32x32.png
+      - type: file
+        path: icons/icon_settings_48x48.png
+      - type: file
+        path: icons/icon_settings_64x64.png
+      - type: file
+        path: icons/icon_settings_128x128.png
+      - type: file
+        path: icons/icon_settings_256x256.png
+      - type: file
+        path: icons/icon_settings_512x512.png
       - type: file
         path: com.pokemmo.PokeMMO.metainfo.xml
