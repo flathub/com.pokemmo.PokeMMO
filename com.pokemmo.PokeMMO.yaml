@@ -50,7 +50,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/PokeMMO/pokemmo-launcher/releases/download/v4.0c/build.zip
-        sha256: sha256:82bdd4867eea8bd4a6eecb52520f723979e2a0994821d8c434a6d3db2d1e793b
+        sha256: 82bdd4867eea8bd4a6eecb52520f723979e2a0994821d8c434a6d3db2d1e793b
         strip-components: 0
       - type: file
         path: static/pokemmo.sh
