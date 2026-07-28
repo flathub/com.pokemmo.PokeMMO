@@ -75,6 +75,16 @@
     </screenshots>
 
     <releases>
+        <release version="4.0c" date="2026-07-27">
+            <description>
+                <p>Migrates to the new unified PokeMMO Launcher (v4.0c), replacing the previous Java-based Unix Launcher</p>
+                <ul>
+                    <li>The launcher is now a native, GraalVM-compiled binary instead of a jar run on a bundled JRE, reducing startup time</li>
+                    <li>Removes the aarch64-specific native library workarounds (libglfw, libimgui-java64, liblwjgl, liblwjgl_opengl), which the new launcher no longer needs</li>
+                    <li>The game client itself is unchanged and continues to run on the bundled JRE</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.0f" date="2025-09-10">
             <description>
                 <p>Updates the PokeMMO Unix Launcher to v3.0f</p>
