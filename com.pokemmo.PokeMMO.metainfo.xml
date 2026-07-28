@@ -75,6 +75,15 @@
     </screenshots>
 
     <releases>
+        <release version="4.0d" date="2026-07-28">
+            <description>
+                <p>Updates the PokeMMO Launcher to v4.0d</p>
+                <p>Bug Fixes</p>
+                <ul>
+                    <li>Game caches are no longer cleared during normal updates, only when repairing the installation</li>
+                </ul>
+            </description>
+        </release>
         <release version="4.0c" date="2026-07-27">
             <description>
                 <p>Migrates to the new unified PokeMMO Launcher (v4.0c), replacing the previous Java-based Unix Launcher</p>
