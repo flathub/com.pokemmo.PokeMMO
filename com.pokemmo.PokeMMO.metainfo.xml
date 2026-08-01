@@ -75,6 +75,11 @@
     </screenshots>
 
     <releases>
+        <release version="4.0e" date="2026-07-29">
+            <description>
+                <p>Updates the PokeMMO Launcher to v4.0e</p>
+            </description>
+        </release>
         <release version="4.0d" date="2026-07-28">
             <description>
                 <p>Updates the PokeMMO Launcher to v4.0d</p>

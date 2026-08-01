@@ -1,8 +1,7 @@
 app-id: com.pokemmo.PokeMMO
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
-sdk-extensions: [org.freedesktop.Sdk.Extension.openjdk21]
 separate-locales: false
 command: pokemmo.sh
 finish-args:
@@ -12,19 +11,9 @@ finish-args:
   - --share=network
   - --device=all
   - --socket=pulseaudio
-  - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
+  - --env=PATH=/app/bin:/usr/bin
   - --env=__GL_THREADED_OPTIMIZATIONS=0
 modules:
-  - name: zenity
-    buildsystem: meson
-    sources:
-      - type: archive
-        url: https://download.gnome.org/sources/zenity/4.2/zenity-4.2.0.tar.xz
-        sha512: 7458a1a7ba13ed13371117daca721d8df325f6a6c75410b1d7298448477104a066be839a4e1a96ef0579b5abfb304e98937672ac02adb8f9323e31bb55bf99bc
-  - name: OpenJDK
-    buildsystem: simple
-    build-commands:
-      - /usr/lib/sdk/openjdk21/install.sh
   - name: PokeMMO
     buildsystem: simple
     only-arches: [x86_64, aarch64]
@@ -49,9 +38,19 @@ modules:
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/PokeMMO/pokemmo-launcher/releases/download/v4.0d/build.zip
-        sha256: 6de55a78b38809f5f74d9d667652b8afede579c6f4efeca58f6a4d5f49e2fc9f
+        url: https://github.com/PokeMMO/pokemmo-launcher/releases/download/4.0e/build.zip
+        sha256: 3a710805442caab88d502db3ad453690814f1e49a0ec6092923aec5617518fb7
         strip-components: 0
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/PokeMMO/pokemmo-launcher/releases/latest
+          # Some upstream tags carry a v prefix and some do not, so strip it for
+          # the version and read the asset URL off the release rather than
+          # rebuilding it from the tag.
+          version-query: .tag_name | sub("^v"; "")
+          url-query: .assets[] | select(.name == "build.zip") | .browser_download_url
+          timestamp-query: .published_at
+          is-main-source: true
       - type: file
         path: static/pokemmo.sh
       - type: file
