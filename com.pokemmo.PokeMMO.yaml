@@ -38,8 +38,8 @@ modules:
       - install -Dm644 -t /app/share/metainfo com.pokemmo.PokeMMO.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/PokeMMO/pokemmo-launcher/releases/download/4.0e/build.zip
-        sha256: 3a710805442caab88d502db3ad453690814f1e49a0ec6092923aec5617518fb7
+        url: https://github.com/PokeMMO/pokemmo-launcher/releases/download/v4.0f/build.zip
+        sha256: 5a69e1f7320de69e8e40786d400c55c397dec9bbec942b34ba37135488d8878f
         strip-components: 0
         x-checker-data:
           type: json
